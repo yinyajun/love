@@ -20,68 +20,62 @@
 <div id="mainDiv">
 	<div id="content">
 		<div id="code">
-			<span class="comments">##</span><br/>
-			<span class="comments"># I am a programmer,</span><br/>
-			<span class="comments"># so I write code to celebrate Valentine's Day in coder's way.</span><br/>
-			<span class="comments">##</span><br/>
-			i = Boy(<span class="string">"Qingcai Cui"</span>);<br/>
-			u = Girl(<span class="string">"Qian Ma"</span>);<br/>
-			<span class="comments"># Oct 14, 2018, I meet you because of PyCon 2018. </span><br/>
+			<span class="comments">######################</span><br/>
+			<span class="comments"># 这是专门写给你的一段代码</span><br/>
+			<span class="comments">######################</span><br/>
+			u = Girl(<span class="string">"谣谣"</span>)<br/>
+			i = Boy(<span class="string">"雅俊"</span>)<br/>
+			<span class="comments"># 2023.09.23，初秋/周六/下午</span><br/>
+			<span class="comments"># 那天是我们第一次相遇，缘分从此开始</span><br/>
 			i.meet(u)<br/>
-			<span class="comments"># Afterwards, I confessed to you. </span><br/>
-			i.confess(u)<br/>
-			<span class="comments"># Nov 5, 2018, You became my girlfriend.</span><br/>
-			u.accepted(i)<br/>
-			<span class="comments"># Since then, we spent harmony happiness life every day.</span><br/>
-			happy(u, i)<br/>
-			<span class="comments"># We enjoy studying together.</span><br/>
-			study(u, i)<br/>
-			<span class="comments"># We enjoy cuisine together.</span><br/>
-			dine(u, i)<br/>
-			<span class="comments"># We enjoy appointment together.</span><br/>
-			appoint(u, i)<br/>
-			<span class="comments"># We enjoy vacation together.</span><br/>
-			vacation(u, i)<br/>
-			<span class="comments"># Sometimes there are a few conflicts between us.</span><br/>
-			conflict(u, i, sometimes=<span class="keyword">True</span>)<br/>
-			<span class="comments"># But we are getting more and more in harmony together.</span><br/>
-			u.in_harmony_with(i) <br/>
-			i.in_harmony_with(u) <br/>
-			<span class="comments"># You are the greatest love of my life.</span><br/>
-			while <span class="keyword">True</span>:<br/>
-			<span class="placeholder"></span><span class="keyword">if</span> u.with(i):<br/>
-			<span class="placeholder"></span><span class="placeholder"></span>u = everything<br/>
-			<span class="placeholder"></span><span class="keyword">else</span>:<br/>
-			<span class="placeholder"></span><span class="placeholder"></span>everything = u<br/>
-			<span class="comments"># Waiting me marries you, we will be the happiest couple in the world.</span><br/>
-			i.marry(u, in_the_future=<span class="keyword">True</span>)<br/>
-			i.live_happily_forever_with(u)<br/>
-			<span class="comments"># I love you forever.</span><br/>
+			<span class="comments"># 2023.10.14，是我们第一次约会 </span><br/>
+			date(u, i)<br/>
+			<span class="comments"># 然后，我们开始慢慢了解 </span><br/>
+			<span class="comments"># 我们一起看电影</span><br/>
+			watch_movie(u, i)<br/>
+			<span class="comments"># 我们一起吃美食</span><br/>
+			enjoy_food(u, i)<br/>
+			<span class="comments"># 我们一起漫步</span><br/>
+			stroll(u, i)<br/>
+			<span class="comments"># 我们一起谈心</span><br/>
+			heart_to_heart_talk(u, i)<br/>
+			<span class="comments"># 不经意间，总能感受到你的善良和温柔</span><br/>
+			i.feel_kind(u)<br/>
+			i.feel_gentle(u)<br/>
+			<span class="comments"># 也在不断接触中，体会到彼此的真诚</span><br/>
+			experience_sincerity(u, i)<br/>
+			<span class="comments"># 不经意间，我想已经喜欢上了你</span><br/>
+			i.fall_in_love_with(u)<br/>
+			<span class="comments"># 想到你，就嘴角上扬</span><br/>
+			if i.miss(u):<br/>
+			<span class="placeholder"></span>i.smile()<br/>
+			<span class="comments"># 我想努力去经营我们之间的关系</span><br/>
+			<span class="comments"># 我想带给你更多的安全感</span><br/>
+			i.give_sense_of_security(u)<br/>
+			<span class="comments"># 遇到你真好~</span><br/>
 		</div>
 		<div id="loveHeart">
 			<canvas id="garden"></canvas>
 			<div id="words">
 				<div id="messages">
-					Qian, I have fallen in love with you for
+					谣谣，此刻是遇见你的，第
 					<div id="elapseClock"></div>
 				</div>
 				<div id="loveu">
-					Love u forever and ever.<br/>
-					<div class="signature">- Qingcai Cui | Germey</div>
+					能在最好的时光与你相遇，真好~<br/>
+					<div class="signature">雅俊</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="copyright">
-		Copyright © 2020 <a href='http://cuiqingcai.com'>cuiqingcai.com</a> 2014-2020
-	</div>
+
 </div>
 <script type="text/javascript">
 	var offsetX = $("#loveHeart").width() / 2;
 	var offsetY = $("#loveHeart").height() / 2 - 55;
 	var together = new Date();
 	// 此处月份介于 0 ~ 11 之间。用本地时间表示，如 8 月要用 7 表示。
-	together.setFullYear(2018, 10, 5);
+	together.setFullYear(2023, 8, 23);
 	together.setHours(15);
 	together.setMinutes(0);
 	together.setSeconds(0);
@@ -93,8 +87,6 @@
 		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
 		document.body.appendChild(msg);
 		$("#code").css("display", "none")
-		$("#copyright").css("position", "absolute");
-		$("#copyright").css("bottom", "10px");
 		document.execCommand("stop");
 	} else {
 		setTimeout(function () {
